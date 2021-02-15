@@ -8,6 +8,16 @@ create table owner(
     email text
 );
 
+create table supplier(
+    id serial primary key,
+    name text,
+    address text
+);
+
+insert into supplier (name, address) VALUES ('sladko', 'Ulyanovsk');
+insert into supplier (name, address) VALUES ('mars', 'Ulyanovsk');
+insert into supplier (name, address) VALUES ('volga konfeti', 'Ulyanovsk');
+
 insert into owner (firstname, lastname, phone, email) VALUES ('adam', 'adamov', '88888','a@ya.cf');
 insert into owner (firstname, lastname, phone, email) VALUES ('adam1', 'adamov1', '7777','b@ya.cf');
 insert into owner (firstname, lastname, phone, email) VALUES ('adam2', 'adamov2', '666','c@ya.cf');

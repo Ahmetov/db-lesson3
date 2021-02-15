@@ -1,5 +1,6 @@
-package org.example.dao;
+package org.example.dao.impl;
 
+import org.example.dao.OwnerJdbcDao;
 import org.example.model.Owner;
 import org.example.service.JdbcDaoInitializer;
 import org.springframework.stereotype.Component;

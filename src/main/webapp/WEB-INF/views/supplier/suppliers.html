@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Suppliers</title>
+</head>
+    <body>
+    <tr th:if="${suppliers.isEmpty()}">
+        <td colspan="2"> No Suppliers Available </td>
+    </tr>
+    <tr th:each="supplier : ${suppliers}">
+        <td><span th:text="${supplier.getName()}"> Name </span></td>
+        <br>
+        <td><span th:text="${supplier.getAddress()}"> Address </span></td>
+        <br>
+        <br>
+    </tr>
+    </body>
+</html>
