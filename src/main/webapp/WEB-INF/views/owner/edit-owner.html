@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit owner</title>
+</head>
+<body>
+    <form action="/owner/update" th:object="${owner}" method="post">
+        <input type="hidden" name="id" th:value="${owner.getId()}">
+        Firstname
+        <input type="text" name="firstname" th:value="${owner.getFirstname()}"><br>
+        LastName
+        <input type="text" name="lastname" th:value="${owner.getLastname()}"><br>
+        Email
+        <input type="text" name="email" th:value="${owner.getEmail()}"><br>
+        Phone
+        <input type="text" name="phone" th:value="${owner.getPhone()}"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

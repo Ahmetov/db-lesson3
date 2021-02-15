@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owners</title>
+</head>
+<body>
+    <tr th:if="${owners.isEmpty()}">
+        <td colspan="2"> No owners Available </td>
+    </tr>
+    <tr th:each="owner : ${owners}">
+        <td><span th:text="${owner.getFirstname()}"> Name </span></td>
+        <br>
+        <td><span th:text="${owner.getLastname()}"> Lastname </span></td>
+        <br>
+        <td><span th:text="${owner.getPhone()}"> Phone </span></td>
+        <br>
+        <td><span th:text="${owner.getEmail()}"> Mail </span></td>
+        <br>
+        <a th:href="'/owner/edit/' + ${owner.getId()}">Edit</a>
+        <form th:action="'/owner/delete/' + ${owner.getId()}" method="post">
+            <button type="submit">Delete</button>
+        </form>
+        <br>
+    </tr>
+    <br>
+    <a href="/owner/add">Create owner</a>
+</body>
+</html>
